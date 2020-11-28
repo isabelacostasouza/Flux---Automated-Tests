@@ -5,8 +5,8 @@ import scrapper.api
 def main():
     automator = scrapper.api.FluxTester()
 
-    username = 'isabelac'
-    password = '1073902kqi'
+    username = ''
+    password = ''
     workflow_name = 'DAF'
 
     automator.login_on_dev(username, password)
