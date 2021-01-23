@@ -1,28 +1,45 @@
 # -*- coding: utf-8 -*-
 
+import sys
+import json
 import scrapper.api
 
 def main():
     automator = scrapper.api.FluxTester()
 
-    username = 'isabelac'
-    password = '1073902kqi'
-    workflow_name = 'DAF'
+    with open(sys.argv[1]) as f:
+        data = json.load(f)
+    
+    workflows_counter = 0
+    workflows = data['workflows']
+    automator.login_on_dev(data['username'], data['password'])
 
-    automator.login_on_dev(username, password)
-    automator.select_workflow(workflow_name)
-    automator.create_instance()
+    for workflow in workflows:
+        automator.select_workflow(workflow['name'])
+        automator.create_instance()
 
-    automator.select_first_radiobox_option('ensaioTA')
-    automator.select_first_dropdown_option('j_id__v_11_j_id8', 'tipoEns_panel')
-    automator.select_first_dropdown_option('j_id__v_19_j_id16', 'regOrganismo_panel')
-    automator.insert_text_on_input('numEnsaio', '4')
-    automator.insert_text_on_input('iniEnsaio_input', '27/11/2020 09:44')
-    automator.insert_text_on_input('fimEnsaio_input', '28/11/2020 10:17')
-    automator.select_first_dropdown_option('j_id__v_45_j_id41', 'operador_panel')
+        for date_input in workflow['date_input']:
+            automator.insert_text_on_input(date_input['input_id'], date_input['value'], True)
 
-    automator.send_instance()
+        for text_input in workflow['text_input']:
+            automator.insert_text_on_input(text_input['input_id'], text_input['value'])
+        
+        for radiobox_item in workflow['radiobox_item']:
+            automator.select_first_radiobox_option(radiobox_item['radiobox_id'])
+
+        for register_option in workflow['register_option']:
+            automator.select_first_register_option(register_option['register_id'], register_option['register_panel_id'])
+        
+        for dropdown_option in workflow['dropdown_option']:
+            automator.select_first_dropdown_option(dropdown_option['dropdown_id'], dropdown_option['dropdown_panel_id'])
+        
+        automator.send_instance()
+        automator.time_sleep(3)
+
+        for activity in workflow['activities']:
+            automator.select_new_activity(workflows_counter)
+        
+        workflows_counter += 1
 
     automator.time_sleep(60)
-
 main()

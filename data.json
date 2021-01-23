@@ -1,0 +1,129 @@
+{
+    "username": "eversonO",
+    "password": "everson1234",
+    "workflows": [
+        {
+            "name": "NMO",
+            "date_input": [
+                {
+                    "input_id": "dataNasc_input",
+                    "value": "27/11/2020 09:44"
+                },
+                {
+                    "input_id": "dataPreen_input",
+                    "value": "27/11/2020 10:44"
+                },
+                {
+                    "input_id": "dataAvaliacao_input",
+                    "value": "27/11/2020 11:44"
+                }
+            ],
+            "text_input": [
+                {
+                    "input_id": "nmo",
+                    "value": "12"
+                },
+                {
+                    "input_id": "nome",
+                    "value": "value"
+                },
+                {
+                    "input_id": "numero",
+                    "value": "12"
+                },
+                {
+                    "input_id": "complem",
+                    "value": "value"
+                },
+                {
+                    "input_id": "idade",
+                    "value": "12"
+                },
+                {
+                    "input_id": "cep",
+                    "value": "31270-170"
+                },
+                {
+                    "input_id": "telefone",
+                    "value": "(31) 98878.6655"
+                },
+                {
+                    "input_id": "email",
+                    "value": "email@email.com"
+                },
+                {
+                    "input_id": "nomeAcomp",
+                    "value": "value"
+                },
+                {
+                    "input_id": "teleAcomp",
+                    "value": "(31) 98878.6656"
+                },
+                {
+                    "input_id": "registro",
+                    "value": "value"
+                },
+                {
+                    "input_id": "rua",
+                    "value": "value"
+                },
+                {
+                    "input_id": "anosEst",
+                    "value": "12"
+                },
+                {
+                    "input_id": "anosRep",
+                    "value": "12"
+                }
+            ],
+            "radiobox_item": [
+                {
+                    "radiobox_id": "sexo"
+                },
+                {
+                    "radiobox_id": "raca"
+                },
+                {
+                    "radiobox_id": "parentes"
+                }
+            ],
+            "register_option": [
+                {
+                    "register_id": "cidadeNasc",
+                    "register_panel_id": "cidadeNasc_panel"
+                },
+                {
+                    "register_id": "ufNascimento",
+                    "register_panel_id": "ufNascimento_panel"
+                },
+                {
+                    "register_id": "profissao",
+                    "register_panel_id": "profissao_panel"
+                },
+                {
+                    "register_id": "bairro",
+                    "register_panel_id": "bairro_panel"
+                },
+                {
+                    "register_id": "cidade",
+                    "register_panel_id": "cidade_panel"
+                },
+                {
+                    "register_id": "uf",
+                    "register_panel_id": "uf_panel"
+                }
+            ],
+            "dropdown_option": [
+                {
+                    "dropdown_id": "nivelEscola",
+                    "dropdown_panel_id": "nivelEscola_panel"
+                }
+            ],
+            "activities": [
+                {
+                    "name": "Anamnese"
+                }
+            ]
+        }
+    ]
+}
