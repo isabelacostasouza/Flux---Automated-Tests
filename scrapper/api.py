@@ -2,7 +2,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
-
+from selenium.webdriver.common.action_chains import ActionChains
 
 class FluxTester():
     def __init__(self):
@@ -17,7 +17,7 @@ class FluxTester():
         return
     
     def login_on_dev(self, username, password):
-        self.driver.get('http://dev.luar.dcc.ufmg.br/')
+        self.driver.get('http://inmetro.luar.dcc.ufmg.br/')
 
         username_element = self.driver.find_element_by_id("loginForm:login")
         username_element.send_keys(username)
@@ -29,7 +29,7 @@ class FluxTester():
         login_button.click()
 
     def select_workflow(self, workflow_name):
-        self.driver.get('http://dev.luar.dcc.ufmg.br/workflowSelection')
+        self.driver.get('http://inmetro.luar.dcc.ufmg.br/workflowSelection')
 
         for element in self.driver.find_elements_by_xpath('.//span[@class = "ui-panel-title"]'):
             if(workflow_name in element.text):
@@ -77,8 +77,10 @@ class FluxTester():
         input_element.send_keys(wanted_value)
 
         if(is_date):
-            self.time_sleep(2)
+            self.time_sleep(1)
             self.blank_click()
+            self.time_sleep(1)
+
     def send_instance(self):
         for element in self.driver.find_elements_by_xpath('.//span[@class = "ui-button-text ui-c"]'):
             if('Enviar' in element.text):
@@ -90,7 +92,9 @@ class FluxTester():
         activities_list[2].click()
     
     def blank_click(self):
-        self.driver.find_element_by_xpath("//html").click()
+        actions = ActionChains(self.driver) 
+        actions.send_keys(Keys.TAB)
+        actions.perform()
 
     def time_sleep(self, wanted_seconds):
         time.sleep(wanted_seconds)

@@ -1,6 +1,6 @@
 {
-    "username": "eversonO",
-    "password": "everson1234",
+    "username": "",
+    "password": "",
     "workflows": [
         {
             "name": "NMO",
@@ -25,6 +25,14 @@
                 },
                 {
                     "input_id": "nome",
+                    "value": "12"
+                },
+                {
+                    "input_id": "ciemRegistro",
+                    "value": "12"
+                },
+                {
+                    "input_id": "hcRegistro",
                     "value": "value"
                 },
                 {
@@ -60,10 +68,6 @@
                     "value": "(31) 98878.6656"
                 },
                 {
-                    "input_id": "registro",
-                    "value": "value"
-                },
-                {
                     "input_id": "rua",
                     "value": "value"
                 },
@@ -85,45 +89,275 @@
                 },
                 {
                     "radiobox_id": "parentes"
+                },
+                {
+                    "radiobox_id": "consultaLaura"
                 }
             ],
-            "register_option": [
-                {
-                    "register_id": "cidadeNasc",
-                    "register_panel_id": "cidadeNasc_panel"
-                },
-                {
-                    "register_id": "ufNascimento",
-                    "register_panel_id": "ufNascimento_panel"
-                },
-                {
-                    "register_id": "profissao",
-                    "register_panel_id": "profissao_panel"
-                },
-                {
-                    "register_id": "bairro",
-                    "register_panel_id": "bairro_panel"
-                },
-                {
-                    "register_id": "cidade",
-                    "register_panel_id": "cidade_panel"
-                },
-                {
-                    "register_id": "uf",
-                    "register_panel_id": "uf_panel"
-                }
-            ],
-            "dropdown_option": [
-                {
-                    "dropdown_id": "nivelEscola",
-                    "dropdown_panel_id": "nivelEscola_panel"
-                }
-            ],
+            "register_option": [],
+            "dropdown_option": [],
             "activities": [
                 {
-                    "name": "Anamnese"
+                    "name": "Anamnese",
+                    "date_input": [
+                        {
+                            "input_id": "data_input",
+                            "value": "27/11/2020 09:44"
+                        }
+                    ],
+                    "text_input": [
+                        {
+                            "input_id": "aNamnese",
+                            "value": "value"
+                        }
+                    ],
+                    "radiobox_item": [],
+                    "register_option": [],
+                    "dropdown_option": []
                 }
             ]
+        },
+        {
+            "name": "DAF",
+            "date_input": [
+                {
+                    "input_id": "iniEnsaio_input",
+                    "value": "27/11/2020 09:44"
+                },
+                {
+                    "input_id": "fimEnsaio_input",
+                    "value": "28/11/2020 09:44"
+                }
+            ],
+            "text_input": [
+                {
+                    "input_id": "numEnsaio",
+                    "value": "12"
+                }
+            ],
+            "radiobox_item": [
+                {
+                    "radiobox_id": "ensaioTA"
+                }
+            ],
+            "register_option": [],
+            "dropdown_option": [],
+            "activities": [
+                {
+                    "name": "Dados do Cultivo",
+                    "date_input": [
+                        {
+                            "input_id": "dataCul_input",
+                            "value": "27/11/2020"
+                        }
+                    ],
+                    "text_input": [
+                        {
+                            "input_id": "protCul",
+                            "value": "12"
+                        },
+                        {
+                            "input_id": "numNin",
+                            "value": "12"
+                        },
+                        {
+                            "input_id": "loteAgua",
+                            "value": "value"
+                        },
+                        {
+                            "input_id": "durAgua",
+                            "value": "value"
+                        },
+                        {
+                            "input_id": "pHAgua",
+                            "value": "value"
+                        },
+                        {
+                            "input_id": "tamMaes",
+                            "value": "12"
+                        },
+                        {
+                            "input_id": "numOvos",
+                            "value": "12"
+                        },
+                        {
+                            "input_id": "ObsDC",
+                            "value": "value"
+                        }
+                    ],
+                    "radiobox_item": [],
+                    "register_option": [],
+                    "dropdown_option": []
+                }
+            ]
+        },
+        {
+            "name": "COV",
+            "date_input": [
+                {
+                    "input_id": "dataDeNascimento_input",
+                    "value": "27/11/2020"
+                },
+                {
+                    "input_id": "dataDaNotificacao_input",
+                    "value": "27/11/2020"
+                },
+                {
+                    "input_id": "dataDeInicioDosSintomas_input",
+                    "value": "27/11/2020"
+                },
+                {
+                    "input_id": "a_58_input",
+                    "value": "27/11/2020"
+                },
+                {
+                    "input_id": "dataDoDiagnostico_input",
+                    "value": "27/11/2020"
+                },
+                {
+                    "input_id": "dataDoLancamento_input",
+                    "value": "27/11/2020"
+                },
+                {
+                    "input_id": "dataDeCuraobito_input",
+                    "value": "27/11/2020"
+                }
+            ],
+            "text_input": [
+                {
+                    "input_id": "medicoResponsavel",
+                    "value": "value"
+                },
+                {
+                    "input_id": "a_6",
+                    "value": "12"
+                },
+                {
+                    "input_id": "nome",
+                    "value": "value"
+                },
+                {
+                    "input_id": "endereco",
+                    "value": "value"
+                },
+                {
+                    "input_id": "cidade",
+                    "value": "value"
+                },
+                {
+                    "input_id": "a_13",
+                    "value": "31270-170"
+                },
+                {
+                    "input_id": "telefone",
+                    "value": "(31) 98878.6655"
+                },
+                {
+                    "input_id": "outro",
+                    "value": "value"
+                },
+                {
+                    "input_id": "a_53--0--1",
+                    "value": "value"
+                }
+            ],
+            "radiobox_item": [
+                {
+                    "radiobox_id": "sexo"
+                },
+                {
+                    "radiobox_id": "eProfissionalDeSaude"
+                },
+                {
+                    "radiobox_id": "isolamentoDomiciliar"
+                },
+                {
+                    "radiobox_id": "teveContatoProximoComCasoConfirmadoOuSuspeitoDeCovid19"
+                },
+                {
+                    "radiobox_id": "fraqueza_clone"
+                },
+                {
+                    "radiobox_id": "dispneia"
+                },
+                {
+                    "radiobox_id": "dorDeGarganta"
+                },
+                {
+                    "radiobox_id": "febre"
+                },
+                {
+                    "radiobox_id": "mialgia"
+                },
+                {
+                    "radiobox_id": "dorNoPeito"
+                },
+                {
+                    "radiobox_id": "cefaleia"
+                },
+                {
+                    "radiobox_id": "coriza"
+                },
+                {
+                    "radiobox_id": "perdaDeOlfato"
+                },
+                {
+                    "radiobox_id": "perdaDePaladar"
+                },
+                {
+                    "radiobox_id": "tosse"
+                },
+                {
+                    "radiobox_id": "doencasCromossomaticas"
+                },
+                {
+                    "radiobox_id": "doencaRespiratoriaCronica"
+                },
+                {
+                    "radiobox_id": "doencasRenaisCronicasEmEstadoAvancado"
+                },
+                {
+                    "radiobox_id": "doencaRenal"
+                },
+                {
+                    "radiobox_id": "gestante"
+                },
+                {
+                    "radiobox_id": "doencasCardiacasCronicas"
+                },
+                {
+                    "radiobox_id": "cardiopatia"
+                },
+                {
+                    "radiobox_id": "imunosupressao"
+                },
+                {
+                    "radiobox_id": "saturacao"
+                },
+                {
+                    "radiobox_id": "diabetes"
+                },
+                {
+                    "radiobox_id": "obesidade"
+                },
+                {
+                    "radiobox_id": "pneumopatia"
+                },
+                {
+                    "radiobox_id": "tipoDeTeste"
+                },
+                {
+                    "radiobox_id": "resultado"
+                }
+            ],
+            "register_option": [],
+            "dropdown_option": [
+                {
+                    "dropdown_id": "raca",
+                    "dropdown_panel_id": "raca_panel"
+                }
+            ],
+            "activities": []
         }
     ]
 }
